@@ -1,0 +1,25 @@
+<br><br>
+
+<hr>
+<br>
+<h2>Diretivas Atributos</h2>
+<br>
+
+<h2>NgClass</h2>
+
+<p [ngClass]="{'active': valor, 'disable':!valor}">Teste NgClass</p>
+<br>
+<hr>
+<h2>NgStyle</h2>
+
+<p [ngStyle]="{'heigth': heigthPx, 'background': backgroundColor}">Teste NgStyle</p>
+<br>
+<hr>
+
+<h2>NgModel</h2>
+
+<input [(ngModel)] = "nome">
+<button (click) = "salvar()">Salvar</button>
+
+<li *ngFor="let item of list ">{{ item.nome }}</li>
+

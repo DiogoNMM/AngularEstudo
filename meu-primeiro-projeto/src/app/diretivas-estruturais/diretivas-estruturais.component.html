@@ -1,0 +1,51 @@
+<br><br>
+
+<hr>
+<br>
+<h2>Diretivas Estruturais</h2>
+<br>
+
+<h2>NgIf</h2>
+
+<p *ngIf="condition; else elseBlock">True</p>
+
+<ng-template #elseBlock>
+    <p>False</p>
+</ng-template>
+
+<hr>
+
+<p *ngIf="conditionClick">True</p>
+<p *ngIf="!conditionClick">False</p>
+
+<button (click)="onClick()">Clicar</button>
+
+<hr>
+
+<h2>NgFor</h2>
+
+<ul>
+    <li *ngFor="let item of list; let i = index;" (click)="onClickEventList(i)">
+        [ {{ i }} ] <b>Nome:</b> {{ item.nome }} || <b>Idade:</b> {{ item.idade }}
+    </li>
+</ul>
+
+<button (click)="onClickAddList()">Add</button>
+
+<hr>
+
+<h2>NgSwitch</h2>
+
+<input type="text" [(ngModel)] = "nome"> 
+
+<div [ngSwitch]="nome">
+    <p *ngSwitchCase="'diogo'">
+        Diogo
+    </p>
+    <p *ngSwitchCase="'julia'">
+        Julia
+    </p>
+    <p *ngSwitchDefault>
+        Sua busca deu erro!!
+    </p>
+</div>
